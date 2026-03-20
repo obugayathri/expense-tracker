@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>Expense Tracker</h1>
+
+<!-- Summary -->
+<div class="summary">
+    <div>Income: ₹<span id="income">0</span></div>
+    <div>Expense: ₹<span id="expense">0</span></div>
+    <div>Balance: ₹<span id="balance">0</span></div>
+</div>
+
+<!-- Form -->
+<form id="form">
+    <input type="text" id="title" placeholder="Title">
+    <input type="number" id="amount" placeholder="Amount">
+
+    <select id="category">
+        <option>Food</option>
+        <option>Rent</option>
+        <option>Salary</option>
+        <option>Shopping</option>
+    </select>
+
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <button type="submit">Add</button>
+</form>
+
+<!-- Chart-->
+<div class="chart-box">
+    <canvas id="chart"></canvas>
+</div>
+
+<!-- Transaction List -->
+<ul id="list"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
